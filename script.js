@@ -6,23 +6,21 @@ burger?.addEventListener('click', () => {
   burger.setAttribute('aria-expanded', String(!expanded));
   nav.classList.toggle('open');
 });
-document.querySelectorAll('#mainNav a').forEach(a => {
-  a.addEventListener('click', () => nav.classList.remove('open'));
-});
+document.querySelectorAll('#mainNav a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
 
 // Year
-document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('year')?.appendChild(document.createTextNode(new Date().getFullYear()));
 
-// Pills filter
+// Pills filter for masonry
 document.addEventListener('click', (e) => {
-  const pill = e.target.closest('.pill');
-  if(!pill) return;
+  const btn = e.target.closest('.pill');
+  if (!btn) return;
   document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
-  pill.classList.add('active');
-  const filter = pill.dataset.filter;
-  document.querySelectorAll('.gallery .card').forEach(card => {
-    const cat = card.getAttribute('data-cat');
-    card.style.display = (filter === 'all' || cat === filter) ? '' : 'none';
+  btn.classList.add('active');
+  const filter = btn.dataset.filter;
+  document.querySelectorAll('.masonry .tile').forEach(tile => {
+    const cat = tile.getAttribute('data-cat');
+    tile.style.display = (filter === 'all' || cat === filter) ? '' : 'none';
   });
 });
 
@@ -30,18 +28,14 @@ document.addEventListener('click', (e) => {
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 const closeBtn = document.querySelector('.lightbox__close');
-
-function openLightbox(src, alt='') {
-  lightboxImg.src = src;
-  lightboxImg.alt = alt;
-  lightbox.style.display = 'flex';
-}
-function closeLightbox() { lightbox.style.display = 'none'; }
-
 document.addEventListener('click', (e) => {
-  const img = e.target.closest('.gallery img');
-  if (img) openLightbox(img.src, img.alt);
-  if (e.target === lightbox) closeLightbox();
+  const img = e.target.closest('.tile img');
+  if (img) {
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt || '';
+    lightbox.style.display = 'flex';
+  }
+  if (e.target === lightbox) lightbox.style.display = 'none';
 });
-closeBtn?.addEventListener('click', closeLightbox);
-document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+closeBtn?.addEventListener('click', () => lightbox.style.display = 'none');
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') lightbox.style.display = 'none'; });

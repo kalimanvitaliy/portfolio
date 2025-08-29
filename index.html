@@ -3,29 +3,28 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Vitaliy Kaliman — Photographer</title>
+    <title>Vitaliy Kaliman — Фотограф</title>
     <meta
       name="description"
-      content="Сімейні, портретні та весільні зйомки. Портфоліо, ціни, контакти."
+      content="Світлі сімейні, портретні та весільні історії. Портфоліо, ціни, контакти."
     />
-    <!-- Elegant Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Nunito+Sans:wght@300;400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="theme-light">
+  <body id="top">
     <!-- Header -->
-    <header class="site-header" id="top">
-      <div class="container header__inner">
-        <a href="#top" class="brand" aria-label="На головну">
-          <span class="brand__logo">VK</span>
-          <span class="brand__name">Vitaliy Kaliman</span>
+    <header class="site-header">
+      <div class="container header">
+        <a class="brand" href="#top" aria-label="На головну">
+          <span class="logo">VK</span>
+          <span class="name">Vitaliy Kaliman</span>
         </a>
-        <nav class="nav" id="mainNav">
+        <nav id="mainNav" class="nav">
           <a href="#about">Про мене</a>
           <a href="#portfolio">Портфоліо</a>
           <a href="#pricing">Ціни</a>
@@ -43,163 +42,157 @@
     </header>
 
     <main>
-      <!-- Hero -->
-      <section class="hero hero--light" aria-label="Hero">
+      <!-- HERO fullscreen -->
+      <section class="hero">
         <img
-          class="hero__img"
-          src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1400&auto=format&fit=crop"
+          class="hero__bg"
+          src="https://images.unsplash.com/photo-1520962918287-7448c2878f65?q=80&w=2200&auto=format&fit=crop"
+          alt="Пара на заході сонця"
         />
         <div class="hero__overlay"></div>
         <div class="container hero__content">
-          <h1 class="hero__title">Світлі історії у ваших кадрах</h1>
-          <p class="hero__subtitle">Сімейні, портретні та весільні зйомки</p>
-          <div class="hero__actions">
-            <a href="#portfolio" class="btn btn--primary">Дивитись роботи</a>
-            <a href="#contact" class="btn btn--outline">Звʼязатися</a>
+          <p class="tag">Світла фотографія</p>
+          <h1 class="display">Історії про любов і життя</h1>
+          <p class="sub">
+            Сімейні, портретні та весільні зйомки — природне світло, теплі
+            відтінки, живі емоції.
+          </p>
+          <div class="actions">
+            <a class="btn btn--primary" href="#portfolio"
+              >Переглянути портфоліо</a
+            >
           </div>
         </div>
         <div class="hero__fade"></div>
       </section>
 
-      <!-- About -->
+      <!-- WHY -->
+      <section class="section">
+        <div class="container features">
+          <article class="feature">
+            <h3>Природність</h3>
+            <p>
+              Без зайвих постанов. Допомагаю відчути себе в кадрі спокійно і
+              вільно.
+            </p>
+          </article>
+          <article class="feature">
+            <h3>Світла обробка</h3>
+            <p>Тепла, «позачасова» колірна схема — фото добре старіють.</p>
+          </article>
+          <article class="feature">
+            <h3>Повний супровід</h3>
+            <p>Образ, локації, таймінг — підкажу й зберу все в одну історію.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
       <section id="about" class="section section--alt">
-        <div class="container grid-2">
-          <div>
+        <div class="container about">
+          <div class="about__media">
+            <img
+              class="rounded"
+              src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1400&auto=format&fit=crop"
+              alt="Портрет на природі"
+            />
+          </div>
+          <div class="about__text">
             <h2 class="title">Про мене</h2>
             <p class="lead">
-              Я — Віталій. Знімаю про любов, близькість і природність. Вісім
-              років допомагаю людям зберігати важливі моменти: від пропозиції та
-              весілля до камерних сімейних історій.
+              Я — Віталій. Уже 8 років фотографую про любов і близькість. Знімаю
+              в Києві та по всій Україні, відкритий до travel.
             </p>
-            <p class="muted">
-              Працюю по всій Україні. Допомагаю з образом, локаціями, таймінгом.
-              Віддам готові фото в онлайн‑галереї у світлій обробці.
-            </p>
-          </div>
-          <div>
-            <img
-              class="about__image"
-              src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1400&auto=format&fit=crop"
-              alt="Ніжний портрет на природі"
-            />
+            <ul class="stats">
+              <li><strong>200+</strong> щасливих історій</li>
+              <li><strong>8</strong> років досвіду</li>
+              <li><strong>∞</strong> уваги до деталей</li>
+            </ul>
           </div>
         </div>
       </section>
 
-      <!-- Portfolio -->
+      <!-- PORTFOLIO -->
       <section id="portfolio" class="section">
         <div class="container">
           <div class="section__head">
             <h2 class="title">Портфоліо</h2>
-            <div class="tabs" role="tablist">
+            <div class="pills" role="tablist">
               <button class="pill active" data-filter="all">Усе</button>
-              <button class="pill" data-filter="family">Сімейна</button>
-              <button class="pill" data-filter="portrait">Портретна</button>
               <button class="pill" data-filter="wedding">Весілля</button>
+              <button class="pill" data-filter="family">Сімейна</button>
+              <button class="pill" data-filter="portrait">Портрет</button>
               <button class="pill" data-filter="nature">Природа</button>
             </div>
           </div>
 
-          <div class="gallery" id="gallery">
-            <figure class="card" data-cat="wedding">
-              <img
-                src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=1400&auto=format&fit=crop"
-                alt="Весільне"
-              />
-            </figure>
-            <figure class="card" data-cat="portrait">
-              <img
-                src="https://images.unsplash.com/photo-1520975944131-0f2b1a7f1c83?q=80&w=1400&auto=format&fit=crop"
-                alt="Портрет"
-              />
-            </figure>
-            <figure class="card" data-cat="family">
-              <img
-                src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1400&auto=format&fit=crop"
-                alt="Сімейне"
-              />
-            </figure>
-            <figure class="card" data-cat="nature">
-              <img
-                src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1400&auto=format&fit=crop"
-                alt="Природа"
-              />
-            </figure>
-            <figure class="card" data-cat="wedding">
-              <img
-                src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1400&auto=format&fit=crop"
-                alt="Весілля"
-              />
-            </figure>
-            <figure class="card" data-cat="portrait">
-              <img
-                src="https://images.unsplash.com/photo-1506084868230-bb9d95c24759?q=80&w=1400&auto=format&fit=crop"
-                alt="Портрет 2"
-              />
-            </figure>
+          <div id="masonry" class="masonry">
+            <a class="tile" data-cat="wedding"
+              ><img
+                src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=1200&auto=format&fit=crop"
+                alt="Весілля 1"
+            /></a>
+            <a class="tile" data-cat="portrait"
+              ><img
+                src="https://images.unsplash.com/photo-1520975944131-0f2b1a7f1c83?q=80&w=900&auto=format&fit=crop"
+                alt="Портрет 1"
+            /></a>
+            <a class="tile" data-cat="family"
+              ><img
+                src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop"
+                alt="Сімейна 1"
+            /></a>
+            <a class="tile" data-cat="nature"
+              ><img
+                src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1200&auto=format&fit=crop"
+                alt="Природа 1"
+            /></a>
           </div>
         </div>
       </section>
 
-      <!-- Pricing -->
+      <!-- PRICING -->
       <section id="pricing" class="section section--alt">
         <div class="container">
-          <h2 class="title">Ціни</h2>
-          <div class="pricing">
-            <article class="price-card">
+          <h2 class="title">Пакети</h2>
+          <div class="tiers">
+            <article class="tier">
               <h3>Сімейна</h3>
+              <p class="note">1.5–2 години • 60+ фото</p>
               <p class="price"><span>2500</span> грн</p>
-              <ul>
-                <li>1.5–2 години</li>
-                <li>60+ фото</li>
-                <li>Світла обробка</li>
-              </ul>
-              <a href="#contact" class="btn btn--soft">Обрати</a>
+              <a class="btn btn--soft" href="#contact">Обрати</a>
             </article>
-
-            <article class="price-card featured">
+            <article class="tier tier--pro">
               <h3>Весільна</h3>
+              <p class="note">повний день / півдня • онлайн-галерея</p>
               <p class="price"><span>від 8000</span> грн</p>
-              <ul>
-                <li>узгоджений таймінг</li>
-                <li>онлайн‑галерея</li>
-                <li>попередній відбір</li>
-              </ul>
-              <a href="#contact" class="btn btn--primary">Обрати</a>
+              <a class="btn btn--primary" href="#contact">Обрати</a>
             </article>
-
-            <article class="price-card">
+            <article class="tier">
               <h3>Портрет</h3>
+              <p class="note">1 година • 40+ фото</p>
               <p class="price"><span>2000</span> грн</p>
-              <ul>
-                <li>1 година</li>
-                <li>40+ фото</li>
-                <li>консультація по образу</li>
-              </ul>
-              <a href="#contact" class="btn btn--soft">Запит</a>
+              <a class="btn btn--soft" href="#contact">Запит</a>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- Contact -->
+      <!-- CONTACT -->
       <section id="contact" class="section">
-        <div class="container grid-2">
-          <div>
-            <img
-              class="about__image"
-              src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=1400&auto=format&fit=crop"
-              alt="Ніжне світло"
-            />
+        <div class="container contact">
+          <div class="contact__text">
+            <h2 class="title">Заплануємо зйомку?</h2>
+            <p class="lead muted">
+              Напишіть кілька слів — я відповім найближчим часом.
+            </p>
           </div>
           <form
-            class="contact"
+            class="form"
             action="mailto:example@example.com"
             method="post"
             enctype="text/plain"
           >
-            <h2 class="title">Є питання?</h2>
-            <p class="lead muted">Залиште заявку — я зв'яжусь з вами.</p>
             <label
               >Ім’я
               <input type="text" name="name" placeholder="Ваше ім’я" required />
@@ -221,8 +214,8 @@
                 placeholder="Коротко опишіть запит"
               ></textarea>
             </label>
-            <div class="form-actions">
-              <button type="submit" class="btn btn--primary">Відправити</button>
+            <div class="form__actions">
+              <button class="btn btn--primary" type="submit">Відправити</button>
               <a class="btn btn--outline" href="tel:+380630533923"
                 >Зателефонувати</a
               >
@@ -233,9 +226,9 @@
     </main>
 
     <footer class="site-footer">
-      <div class="container footer__inner">
-        <p>© <span id="year"></span> Vitaliy Kaliman. Всі права захищено.</p>
-        <a href="#top" class="back-to-top">▲ До гори</a>
+      <div class="container footer">
+        <p>© <span id="year"></span> Vitaliy Kaliman</p>
+        <a class="back" href="#top">До гори ↑</a>
       </div>
     </footer>
 
@@ -245,6 +238,6 @@
       <button class="lightbox__close" aria-label="Закрити">✕</button>
     </div>
 
-    <script src="./script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

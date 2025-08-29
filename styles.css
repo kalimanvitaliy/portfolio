@@ -1,0 +1,440 @@
+/* ===== Light, airy palette (wedding-friendly) ===== */
+:root {
+  --bg: #fafafa; /* page background */
+  --panel: #ffffff; /* cards/panels */
+  --muted-bg: #f3f4f6; /* section alt */
+  --text: #0f172a; /* primary text (slate-900) */
+  --muted: #475569; /* secondary text (slate-600) */
+  --primary: #7c3aed; /* soft violet */
+  --primary-2: #22c1c3; /* teal for subtle gradient */
+  --ring: rgba(124, 58, 237, 0.28);
+  --radius: 18px;
+  --shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: "Nunito Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+a:hover {
+  opacity: 0.9;
+}
+
+.container {
+  width: min(1120px, 92vw);
+  margin-inline: auto;
+}
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(2, 6, 23, 0.06);
+}
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.brand__logo {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(120deg, var(--primary), var(--primary-2));
+  color: #fff;
+  font-weight: 900;
+}
+.brand__name {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: var(--text);
+}
+.nav {
+  display: flex;
+  gap: 26px;
+}
+.nav a {
+  color: var(--text);
+  opacity: 0.85;
+  font-weight: 600;
+}
+.nav a:hover {
+  color: var(--primary);
+}
+.burger {
+  display: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.burger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #0f172a;
+  margin: 5px 0;
+  border-radius: 2px;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 64vh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.hero__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero--light .hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.45),
+    rgba(255, 255, 255, 0.75)
+  );
+}
+.hero__content {
+  position: relative;
+  text-align: center;
+  padding: 90px 0;
+}
+.hero__title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: clamp(32px, 5.5vw, 64px);
+  margin: 0 0 8px;
+  color: #0f172a;
+}
+.hero__subtitle {
+  margin: 0 0 24px;
+  color: var(--muted);
+  font-size: clamp(16px, 2vw, 22px);
+}
+.hero__actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.hero__fade {
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 120px;
+  background: linear-gradient(180deg, transparent, var(--bg));
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-weight: 700;
+  transition: all 0.25s ease;
+  border: 1px solid rgba(2, 6, 23, 0.1);
+}
+.btn--primary {
+  background: linear-gradient(90deg, var(--primary), var(--primary-2));
+  color: #fff;
+  border: 0;
+  box-shadow: var(--shadow);
+}
+.btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.25), 0 0 0 6px var(--ring);
+}
+.btn--outline {
+  background: transparent;
+  color: var(--primary);
+  border: 1.5px solid var(--primary);
+}
+.btn--outline:hover {
+  background: rgba(124, 58, 237, 0.05);
+}
+.btn--soft {
+  background: var(--muted-bg);
+  color: var(--text);
+}
+
+/* Sections */
+.section {
+  padding: 90px 0;
+}
+.section--alt {
+  background: var(--muted-bg);
+}
+.section__head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+/* Titles */
+.title {
+  margin: 0 0 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: clamp(28px, 3.2vw, 44px);
+  color: var(--text);
+}
+.lead {
+  font-size: 1.06rem;
+}
+.muted {
+  color: var(--muted);
+}
+
+/* Layout */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 30px;
+  align-items: center;
+}
+@media (max-width: 960px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.about__image {
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(2, 6, 23, 0.1);
+}
+
+/* Pills (tabs) */
+.tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.pill {
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid rgba(2, 6, 23, 0.08);
+  color: var(--text);
+  font-weight: 700;
+  cursor: pointer;
+}
+.pill:hover {
+  border-color: var(--primary);
+}
+.pill.active {
+  background: linear-gradient(90deg, var(--primary), var(--primary-2));
+  color: #fff;
+  border-color: transparent;
+}
+
+/* Gallery */
+.gallery {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+@media (max-width: 960px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 620px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+.card {
+  background: var(--panel);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+}
+.card img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  cursor: zoom-in;
+  transition: transform 0.35s ease;
+}
+.card:hover img {
+  transform: scale(1.04);
+}
+
+/* Pricing */
+.pricing {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 960px) {
+  .pricing {
+    grid-template-columns: 1fr;
+  }
+}
+.price-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(2, 6, 23, 0.06);
+}
+.price-card.featured {
+  border: 1.5px solid var(--primary);
+}
+.price {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 10px 0 12px;
+}
+.price span {
+  font-size: 28px;
+}
+.price-card ul {
+  margin: 0 0 12px 18px;
+  color: var(--muted);
+}
+
+/* Contact */
+.contact {
+  background: #fff;
+  padding: 22px;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(2, 6, 23, 0.06);
+}
+.contact label {
+  display: block;
+  font-weight: 700;
+  margin: 12px 0 6px;
+}
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(2, 6, 23, 0.12);
+  background: #fff;
+  color: var(--text);
+}
+.contact input:focus,
+.contact textarea:focus {
+  border-color: var(--primary);
+}
+.form-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Footer */
+.site-footer {
+  background: #fff;
+  border-top: 1px solid rgba(2, 6, 23, 0.06);
+  color: var(--muted);
+  padding: 24px 0;
+}
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+}
+.lightbox img {
+  max-width: min(1100px, 95vw);
+  max-height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+.lightbox__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 0;
+  background: #fff;
+  color: #0f172a;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+/* Mobile nav */
+@media (max-width: 820px) {
+  .nav {
+    display: none;
+    position: absolute;
+    right: 16px;
+    top: 64px;
+    width: 240px;
+    background: #fff;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    flex-direction: column;
+    border: 1px solid rgba(2, 6, 23, 0.06);
+  }
+  .nav a {
+    padding: 8px 6px;
+  }
+  .nav.open {
+    display: flex;
+  }
+  .burger {
+    display: block;
+  }
+}
